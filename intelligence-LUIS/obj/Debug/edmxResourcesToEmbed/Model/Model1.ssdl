@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PactDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="Notification" />
+    </Key>
+    <Property Name="Notification" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Worker" Type="varchar" MaxLength="50" />
+    <Property Name="Room" Type="varchar" MaxLength="50" />
+    <Property Name="TimeStart" Type="varchar(max)" Nullable="false" />
+    <Property Name="TimeEnd" Type="varchar(max)" />
+    <Property Name="CallToAction" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="PersonID" Type="int" Nullable="false" />
+    <Property Name="CorrectGear" Type="bit" Nullable="false" />
+    <Property Name="ObjectID" Type="int" />
+    <Property Name="MobileNo" Type="int" Nullable="false" />
+    <Property Name="IsSafe" Type="bit" Nullable="false" />
+    <Property Name="AuthLevel" Type="int" Nullable="false" />
+    <Property Name="RoomID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role" Type="varchar(max)" Nullable="false" />
+    <Property Name="SafetyInfringements" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkerInRooms">
+    <Key>
+      <PropertyRef Name="Worker" />
+    </Key>
+    <Property Name="Worker" Type="varbinary" MaxLength="50" Nullable="false" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+    <Property Name="RoomID" Type="int" />
+    <Property Name="WorkerName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="PactDBModelStoreContainer">
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkerInRooms" EntityType="Self.WorkerInRooms" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

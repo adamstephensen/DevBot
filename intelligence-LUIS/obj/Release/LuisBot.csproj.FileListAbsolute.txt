@@ -1,0 +1,91 @@
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\LuisBot.dll.config
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\LuisBot.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\LuisBot.pdb
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Autofac.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Chronic.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\EntityFramework.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\EntityFramework.SqlServer.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Bot.Builder.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Bot.Connector.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Newtonsoft.Json.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.Net.Http.Formatting.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.Web.Http.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.Web.Http.WebHost.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Autofac.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\EntityFramework.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\EntityFramework.SqlServer.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Bot.Builder.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.Bot.Connector.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\Newtonsoft.Json.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.Net.Http.Formatting.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.Web.Http.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\System.Web.Http.WebHost.xml
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\obj\Release\LuisBot.csprojResolveAssemblyReference.cache
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\obj\Release\LuisBot.csproj.CoreCompileInputs.cache
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\obj\Release\LuisBot.dll
+C:\Users\relyons\OneDrive - Microsoft\Dev\BOTBUILDER\BotBuilder-Samples-master\CSharp\intelligence-LUIS\obj\Release\LuisBot.pdb
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\LuisBot.dll.config
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\LuisBot.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\LuisBot.pdb
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Autofac.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Chronic.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\EntityFramework.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\EntityFramework.SqlServer.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Bot.Builder.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Bot.Connector.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Newtonsoft.Json.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\QnAMakerDialog.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.Net.Http.Formatting.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.Web.Http.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.Web.Http.WebHost.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Autofac.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\EntityFramework.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\EntityFramework.SqlServer.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Bot.Builder.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.Bot.Connector.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\Newtonsoft.Json.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.Net.Http.Formatting.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.Web.Http.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\System.Web.Http.WebHost.xml
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\obj\Release\LuisBot.csprojResolveAssemblyReference.cache
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\obj\Release\LuisBot.csproj.CoreCompileInputs.cache
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\obj\Release\LuisBot.dll
+C:\Users\relyons\Documents\DevBot\intelligence-LUIS\obj\Release\LuisBot.pdb

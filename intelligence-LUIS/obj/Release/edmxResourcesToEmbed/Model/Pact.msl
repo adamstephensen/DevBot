@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PactDBModel1StoreContainer" CdmEntityContainer="PactDB">
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="PactDBModel1.Notification">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="Notification1" ColumnName="Notification" />
+          <ScalarProperty Name="Worker" ColumnName="Worker" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="CallToAction" ColumnName="CallToAction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objects">
+      <EntityTypeMapping TypeName="PactDBModel1.Object">
+        <MappingFragment StoreEntitySet="Object">
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="Auth" ColumnName="Auth" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="PactDBModel1.Worker">
+        <MappingFragment StoreEntitySet="Worker">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="CorrectGear" ColumnName="CorrectGear" />
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="IsSafe" ColumnName="IsSafe" />
+          <ScalarProperty Name="AuthLevel" ColumnName="AuthLevel" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="SafetyInfringements" ColumnName="SafetyInfringements" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerInRooms">
+      <EntityTypeMapping TypeName="PactDBModel1.WorkerInRoom">
+        <MappingFragment StoreEntitySet="WorkerInRooms">
+          <ScalarProperty Name="Worker" ColumnName="Worker" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

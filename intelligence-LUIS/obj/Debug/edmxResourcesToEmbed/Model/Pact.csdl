@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PactDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="Notification1" />
+    </Key>
+    <Property Name="Notification1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Worker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TimeEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CallToAction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Object">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+    </Key>
+    <Property Name="ObjectID" Type="Int32" Nullable="false" />
+    <Property Name="Auth" Type="Int32" Nullable="false" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="PersonID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="CorrectGear" Type="Boolean" Nullable="false" />
+    <Property Name="ObjectID" Type="Int32" />
+    <Property Name="MobileNo" Type="Int32" Nullable="false" />
+    <Property Name="IsSafe" Type="Boolean" Nullable="false" />
+    <Property Name="AuthLevel" Type="Int32" Nullable="false" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SafetyInfringements" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkerInRoom">
+    <Key>
+      <PropertyRef Name="Worker" />
+    </Key>
+    <Property Name="Worker" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+    <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="WorkerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="PactDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Notifications" EntityType="Self.Notification" />
+    <EntitySet Name="Objects" EntityType="Self.Object" />
+    <EntitySet Name="Workers" EntityType="Self.Worker" />
+    <EntitySet Name="WorkerInRooms" EntityType="Self.WorkerInRoom" />
+  </EntityContainer>
+</Schema>

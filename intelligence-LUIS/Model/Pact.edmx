@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PactDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Notifications">
+          <Key>
+            <PropertyRef Name="Notification" />
+          </Key>
+          <Property Name="Notification" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Worker" Type="varchar" MaxLength="50" />
+          <Property Name="Room" Type="varchar" MaxLength="50" />
+          <Property Name="TimeStart" Type="varchar(max)" Nullable="false" />
+          <Property Name="TimeEnd" Type="varchar(max)" />
+          <Property Name="CallToAction" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Object">
+          <Key>
+            <PropertyRef Name="ObjectID" />
+          </Key>
+          <Property Name="ObjectID" Type="int" Nullable="false" />
+          <Property Name="Auth" Type="int" Nullable="false" />
+          <Property Name="RoomID" Type="int" />
+          <Property Name="PersonID" Type="int" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Worker">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="PersonID" Type="int" Nullable="false" />
+          <Property Name="CorrectGear" Type="bit" Nullable="false" />
+          <Property Name="ObjectID" Type="int" />
+          <Property Name="MobileNo" Type="int" Nullable="false" />
+          <Property Name="IsSafe" Type="bit" Nullable="false" />
+          <Property Name="AuthLevel" Type="int" Nullable="false" />
+          <Property Name="RoomID" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role" Type="varchar(max)" Nullable="false" />
+          <Property Name="SafetyInfringements" Type="int" />
+        </EntityType>
+        <EntityType Name="WorkerInRooms">
+          <Key>
+            <PropertyRef Name="Worker" />
+          </Key>
+          <Property Name="Worker" Type="varbinary" MaxLength="50" Nullable="false" />
+          <Property Name="Time" Type="varchar" MaxLength="50" />
+          <Property Name="RoomID" Type="int" />
+          <Property Name="WorkerName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="PactDBModel1StoreContainer">
+          <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Object" EntityType="Self.Object" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkerInRooms" EntityType="Self.WorkerInRooms" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PactDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="Notification1" />
+          </Key>
+          <Property Name="Notification1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Worker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Room" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TimeStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TimeEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CallToAction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Object">
+          <Key>
+            <PropertyRef Name="ObjectID" />
+          </Key>
+          <Property Name="ObjectID" Type="Int32" Nullable="false" />
+          <Property Name="Auth" Type="Int32" Nullable="false" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="PersonID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Worker">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="PersonID" Type="Int32" Nullable="false" />
+          <Property Name="CorrectGear" Type="Boolean" Nullable="false" />
+          <Property Name="ObjectID" Type="Int32" />
+          <Property Name="MobileNo" Type="Int32" Nullable="false" />
+          <Property Name="IsSafe" Type="Boolean" Nullable="false" />
+          <Property Name="AuthLevel" Type="Int32" Nullable="false" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SafetyInfringements" Type="Int32" />
+        </EntityType>
+        <EntityType Name="WorkerInRoom">
+          <Key>
+            <PropertyRef Name="Worker" />
+          </Key>
+          <Property Name="Worker" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+          <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="WorkerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PactDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Notifications" EntityType="Self.Notification" />
+          <EntitySet Name="Objects" EntityType="Self.Object" />
+          <EntitySet Name="Workers" EntityType="Self.Worker" />
+          <EntitySet Name="WorkerInRooms" EntityType="Self.WorkerInRoom" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PactDBModel1StoreContainer" CdmEntityContainer="PactDB">
+          <EntitySetMapping Name="Notifications">
+            <EntityTypeMapping TypeName="PactDBModel1.Notification">
+              <MappingFragment StoreEntitySet="Notifications">
+                <ScalarProperty Name="Notification1" ColumnName="Notification" />
+                <ScalarProperty Name="Worker" ColumnName="Worker" />
+                <ScalarProperty Name="Room" ColumnName="Room" />
+                <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+                <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+                <ScalarProperty Name="CallToAction" ColumnName="CallToAction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Objects">
+            <EntityTypeMapping TypeName="PactDBModel1.Object">
+              <MappingFragment StoreEntitySet="Object">
+                <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+                <ScalarProperty Name="Auth" ColumnName="Auth" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workers">
+            <EntityTypeMapping TypeName="PactDBModel1.Worker">
+              <MappingFragment StoreEntitySet="Worker">
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="CorrectGear" ColumnName="CorrectGear" />
+                <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="IsSafe" ColumnName="IsSafe" />
+                <ScalarProperty Name="AuthLevel" ColumnName="AuthLevel" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="SafetyInfringements" ColumnName="SafetyInfringements" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkerInRooms">
+            <EntityTypeMapping TypeName="PactDBModel1.WorkerInRoom">
+              <MappingFragment StoreEntitySet="WorkerInRooms">
+                <ScalarProperty Name="Worker" ColumnName="Worker" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
