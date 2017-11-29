@@ -10,6 +10,9 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using formflow.FormFlow;
 using LuisBot.Services;
+using LuisBot.Model;
+using Microsoft.Bot.Builder.ConnectorEx;
+using Newtonsoft.Json;
 
 namespace LuisBot.Dialogs
 {
@@ -20,8 +23,9 @@ namespace LuisBot.Dialogs
     public class RootDialog : IDialog<object>
     {
         private const string QNAOption = "Ask Questions about Repo";
-        private const string FindContributorsOption = "Find Contributors";
+        private const string FindContributorsOption = "Find Code";
         private const string SubmitIssueOption = "Submit an issue";
+        private const string QueueBuildOption = "Queue a build";
         private Commons commons;
         public async Task StartAsync(IDialogContext context)
         {
@@ -37,7 +41,7 @@ namespace LuisBot.Dialogs
             /* When MessageReceivedAsync is called, it's passed an IAwaitable<IMessageActivity>. To get the message,
              *  await the result. */
             //Show options whatever users chat
-            PromptDialog.Choice(context, this.AfterMenuSelection, new List<string>() { QNAOption, SubmitIssueOption, FindContributorsOption }, "What can I do you for?");
+            PromptDialog.Choice(context, this.AfterMenuSelection, new List<string>() { QNAOption, SubmitIssueOption, FindContributorsOption, QueueBuildOption }, "What can I do you for?");
         }
 
         //After users select option, Bot call other dialogs
@@ -56,6 +60,27 @@ namespace LuisBot.Dialogs
                     context.Call<CreateGitIssue>(myform, commons.ResumeAfterCreateIssueFormOption);
                     break;
 
+                case FindContributorsOption:
+                    await context.PostAsync("Which file are you looking for?");
+                    context.Call(new SearchCodeDialog(), ResumeAfterOptionDialogAsync);
+                    break;
+
+                case QueueBuildOption:
+
+                    // Create a queue Message
+                    var queueMessage = new Message
+                    {
+                        RelatesTo = context.Activity.ToConversationReference(),
+                        Text = "New Queue" 
+                    };
+
+                    // write the queue Message to the queue
+                    await commons.AddMessageToQueueAsync(JsonConvert.SerializeObject(queueMessage));
+
+                    await context.PostAsync("New build has been queued. I'll notify you when it's done");
+                    
+                    break;
+
             }
         }
 
@@ -63,7 +88,7 @@ namespace LuisBot.Dialogs
         {
             //throw new NotImplementedException();
             await context.PostAsync("Lets start again");
-            PromptDialog.Choice(context, this.AfterMenuSelection, new List<string>() { QNAOption, SubmitIssueOption, FindContributorsOption }, "What can I do you for?");
+            PromptDialog.Choice(context, this.AfterMenuSelection, new List<string>() { QNAOption, SubmitIssueOption, FindContributorsOption, QueueBuildOption }, "What can I do you for?");
 
 
         }

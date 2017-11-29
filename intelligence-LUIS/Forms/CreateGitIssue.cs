@@ -13,7 +13,7 @@ namespace formflow.FormFlow
         public string Message { get; set; }
         [Prompt("Repository Name?")]
         public string Number { get; set; }
-        [Prompt("What is the Title of your issue?")]
+        [Prompt("What is the title of your issue?")]
         public string Title { get; set; }
         [Prompt("Please describe your issue in more detail")]
         public string Description { get; set; }

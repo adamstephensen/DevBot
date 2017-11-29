@@ -1,7 +1,10 @@
 ﻿using formflow.FormFlow;
 using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -69,6 +72,50 @@ namespace LuisBot.Services
                 // upload the data using Post mehtod
                 string response = webClient.UploadString(serviceUrl, jsonObject);
             }
+        }
+
+        
+
+        private void SearchGithub(string result)
+        {
+            using (WebClient client = new WebClient())
+            {
+                // get the lead details
+                var myLead = result;
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(CreateGitIssue));
+                MemoryStream memoryStream = new MemoryStream();
+                serializer.WriteObject(memoryStream, myLead);
+                var jsonObject = Encoding.Default.GetString(memoryStream.ToArray());
+
+                var webClient = new WebClient();
+                webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
+
+                // our function key
+
+                var serviceUrl = "https://api.github.com/search/code?q=" + result + "+in:file+language:js+repo:jquery/jquery";
+                
+                // upload the data using Post mehtod
+                string response = webClient.UploadString(serviceUrl, jsonObject);
+            }
+        }
+
+        public async Task AddMessageToQueueAsync(string message)
+        {
+            // Retrieve storage account from connection string.
+            var storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["AzureWebJobsStorage"]); 
+
+            // Create the queue client.
+            var queueClient = storageAccount.CreateCloudQueueClient();
+
+            // Retrieve a reference to a queue.
+            var queue = queueClient.GetQueueReference("bot-queue");
+
+            // Create the queue if it doesn't already exist.
+            await queue.CreateIfNotExistsAsync();
+
+            // Create a message and add it to the queue.
+            var queuemessage = new CloudQueueMessage(message);
+            await queue.AddMessageAsync(queuemessage);
         }
     }
 }

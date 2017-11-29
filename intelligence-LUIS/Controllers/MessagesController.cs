@@ -11,6 +11,9 @@
     using Microsoft.Bot.Builder.Dialogs;
     using Microsoft.Bot.Connector;
     using Services;
+    using Newtonsoft.Json;
+    using LuisBot.Model;
+    using Newtonsoft.Json.Linq;
 
     [BotAuthentication]
     public class MessagesController : ApiController
@@ -41,6 +44,17 @@
 
                 //await Conversation.SendAsync(activity, () => new RootLuisDialog());
                 await Conversation.SendAsync(activity, () => new RootDialog());
+            }
+            else if (activity.Type == ActivityTypes.Event)
+            {
+                IEventActivity triggerEvent = activity;
+                var message = JsonConvert.DeserializeObject<Message>(((JObject)triggerEvent.Value).GetValue("Message").ToString());
+                var messageactivity = (Activity)message.RelatesTo.GetPostToBotMessage();
+
+                var client = new ConnectorClient(new Uri(messageactivity.ServiceUrl));
+                var triggerReply = messageactivity.CreateReply();
+                triggerReply.Text = "Sorry to interupt but I thought I would let you know that your build has finished! Great success!";
+                await client.Conversations.ReplyToActivityAsync(triggerReply);
             }
             else
             {
