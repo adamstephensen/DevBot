@@ -30,19 +30,6 @@
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                if (IsSpellCorrectionEnabled)
-                {
-                    try
-                    {
-                        activity.Text = await this.spellService.GetCorrectedTextAsync(activity.Text);
-                    }
-                    catch (Exception ex)
-                    {
-                        Trace.TraceError(ex.ToString());
-                    }
-                }
-
-                //await Conversation.SendAsync(activity, () => new RootLuisDialog());
                 await Conversation.SendAsync(activity, () => new RootDialog());
             }
             else if (activity.Type == ActivityTypes.Event)
@@ -53,7 +40,7 @@
 
                 var client = new ConnectorClient(new Uri(messageactivity.ServiceUrl));
                 var triggerReply = messageactivity.CreateReply();
-                triggerReply.Text = "Sorry to interupt but I thought I would let you know that your build has finished! Great success!";
+                triggerReply.Text = "I am very sorry to interupt but I thought I would let you know that your build has finished! Great success!";
                 await client.Conversations.ReplyToActivityAsync(triggerReply);
             }
             else

@@ -13,23 +13,7 @@ namespace LuisBot.Dialogs
     public class QNADialog : QnAMakerDialog<object>
     {
 
-        public override async Task NoMatchHandler(IDialogContext context, string originalQueryText)
-        {
-            await context.Forward(new RootLuisDialog(),ResumeAfterOptionDialogAsync,context.Activity, System.Threading.CancellationToken.None);
-        }
-
-        private async Task ResumeAfterOptionDialogAsync(IDialogContext context, IAwaitable<object> result)
-        {
-            context.Done<object>(null);
-        }
-
-        [QnAMakerResponseHandler(50)]
-        public async Task LowScoreHandler(IDialogContext context, string originalQueryText, QnAMakerResult result) 
-        {
-            await context.PostAsync($"I've found an answer that might help... {result.Answer}.");
-            context.Wait(MessageReceived);
-        }
-
+    
 
     }
 }
