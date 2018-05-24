@@ -1,6 +1,6 @@
-# LUIS Bot Sample
+# Dev Bot
 
-A sample bot using LuisDialog to integrate with a LUIS.ai application.
+I am a sample bot that demonstrates some bot functionality in a development context.
 
 [![Deploy to Azure][Deploy Button]][Deploy CSharp/LUIS]
 
